@@ -1,5 +1,11 @@
 == Changelog ==
 
+Version 1.0.2 – 15.08.2016
+---
+- corrected theme name in footer.php
+
+
+
 Version 1.0.1 – 15.08.2016
 ---
 - added @version tag in file headers
