@@ -1,4 +1,10 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Main template file
+ *
+ * @version 1.0
+ */
+get_header(); ?>
 	<main role="main" id="main">
 		<?php if ( have_posts() ) {
 			while ( have_posts() ) {

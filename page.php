@@ -1,4 +1,10 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Page template
+ *
+ * @version 1.0
+ */
+get_header(); ?>
 	<main role="main" id="main">
 		<?php while ( have_posts() ) {
 			the_post(); ?>

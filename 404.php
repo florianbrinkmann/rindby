@@ -1,4 +1,10 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Template for 404 error
+ *
+ * @version 1.0
+ */
+get_header(); ?>
 	<main role="main" id="main">
 		<div id="content">
 			<article class="page">

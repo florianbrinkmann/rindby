@@ -1,4 +1,10 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Template for search results
+ *
+ * @version 1.0
+ */
+get_header(); ?>
 	<main role="main" id="main">
 		<?php if ( have_posts() ) { ?>
 			<header class="archive-header">

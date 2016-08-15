@@ -1,4 +1,9 @@
 <?php
+/**
+ * Comments template
+ *
+ * @version 1.0
+ */
 if ( post_password_required() ) {
 	return;
 }
