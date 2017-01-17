@@ -68,7 +68,7 @@ function rindby_scripts_styles() {
 	}
 
 	wp_enqueue_style( 'rindby-style', get_template_directory_uri() . '/css/rindby.css', array(), null );
-	wp_enqueue_style( 'rindby-fonts', '//brick.a.ssl.fastly.net/Andada:400,700,400i,700i', array(), null );
+	wp_enqueue_style( 'rindby-fonts', '//fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i', array(), null );
 }
 
 add_action( 'wp_enqueue_scripts', 'rindby_scripts_styles' );

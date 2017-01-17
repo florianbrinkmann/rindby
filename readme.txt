@@ -1,5 +1,11 @@
 == Changelog ==
 
+Version 1.1.2 – 17.01.2017
+---
+- changed font to Droid Serif
+
+
+
 Version 1.1.1 – 17.01.2017
 ---
 - switched theme and author uri…
@@ -43,9 +49,9 @@ Version 1.0 – 14.08.2016
 
 == Copyright ==
 
-Andada
-Licence: SIL Open Font License, 1.1
-Source: http://brick.im/fonts/andada/
+Droid Serif
+Licence: Apache License, 2.0
+Source: https://fonts.google.com/specimen/Droid+Serif
 
 ---
 Rindby WordPress Theme, Copyright 2016 Florian Brinkmann

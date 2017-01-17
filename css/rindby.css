@@ -1022,9 +1022,3 @@ nav.post-navigation:after, #comments ol header:after, .clearfix:after {
         font-size: 1.68em;
     }
 }
-
-@media screen and (min-width: 120em) {
-    html {
-        font-size: 1.8em;
-    }
-}
