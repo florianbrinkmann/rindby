@@ -2,7 +2,7 @@
 /**
  * Comments template
  *
- * @version 1.0
+ * @version 1.0.3
  */
 if ( post_password_required() ) {
 	return;
@@ -12,7 +12,7 @@ if ( post_password_required() ) {
 <div id="comments" class="comments-area">
 	<?php if ( ! empty( $comments_by_type['comment'] ) ) {
 		$comment_number = count( $comments_by_type['comment'] ); ?>
-		<h2 id="comments-title">
+        <h2 id="comments-title">
 			<?php /* translators: Title for comment list. 1=comment number, 2=post title */
 			printf( _n(
 				'%1$s Comment on &ldquo;%2$s&rdquo;',
@@ -21,37 +21,37 @@ if ( post_password_required() ) {
 				'rindby'
 			), number_format_i18n( $comment_number ),
 				get_the_title() ) ?>
-		</h2>
+        </h2>
 
-		<ol class="commentlist">
+        <ol class="commentlist">
 			<?php wp_list_comments( array(
 				'callback' => 'rindby_comment',
 				'style'    => 'ol',
 				'type'     => 'comment'
 			) ); ?>
-		</ol>
+        </ol>
 	<?php }
 	if ( ! empty( $comments_by_type['pings'] ) ) {
 		$trackback_number = count( $comments_by_type['pings'] ); ?>
-		<h2 id="trackbacks-title">
+        <h2 id="trackbacks-title">
 			<?php printf( _n(
 				'%1$s Trackback on &ldquo;%2$s&rdquo;',
 				'%1$s Trackbacks on &ldquo;%2$s&rdquo;',
 				$trackback_number,
 				'rindby'
 			), number_format_i18n( $trackback_number ), get_the_title() ) ?>
-		</h2>
+        </h2>
 
-		<ol class="commentlist">
+        <ol class="commentlist">
 			<?php wp_list_comments( array(
-				'callback' => 'rindby_comment',
-				'type'     => 'pings',
+				'type'       => 'pings',
+				'short_ping' => true
 			) ); ?>
-		</ol>
+        </ol>
 	<?php }
 	the_comments_navigation();
 	if ( ! comments_open() && get_comments_number() ) { ?>
-		<p class="nocomments"><?php _e( 'Comments are closed.', 'rindby' ); ?></p>
+        <p class="nocomments"><?php _e( 'Comments are closed.', 'rindby' ); ?></p>
 	<?php }
 	comment_form(); ?>
 

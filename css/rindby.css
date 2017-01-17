@@ -5,11 +5,16 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
+
+* {
+    word-wrap: break-word;
+}
+
 html {
     color: #444444;
-    font-family: "Merriweather", "Segoe UI Bold", "Roboto Slab", "Droid Serif", AvenirNext-Bold, "Avenir Bold", Georgia, "Times New Roman", Times, serif; /* 1 */
+    font-family: "Andada", "Segoe UI Bold", "Roboto Slab", "Droid Serif", AvenirNext-Bold, "Avenir Bold", Georgia, "Times New Roman", Times, serif; /* 1 */
     font-size: 1em;
-    line-height: 1.8;
+    line-height: 1.6;
     -ms-text-size-adjust: 100%; /* 2 */
     -webkit-text-size-adjust: 100%; /* 2 */
 }
@@ -135,24 +140,24 @@ h1, h2, h3, h4, h5, h6 {
 h1,
 .entry-title {
     font-size: 1.68rem;
-    line-height: 2.5rem;
+    line-height: 2.2rem;
     margin: 0;
 }
 
 h1 {
-    margin: 2.7rem 0 0;
+    margin: 2.4rem 0 0;
 }
 
 h2:not(.entry-title) {
     font-size: 1.575rem;
     line-height: 2.2rem;
-    margin: 2.7rem 0 0;
+    margin: 2.4rem 0 0;
 }
 
 h3 {
     font-size: 1.476rem;
-    line-height: 1.9rem;
-    margin: 2.7rem 0 0;
+    line-height: 1.8rem;
+    margin: 2.4rem 0 0;
 }
 
 aside h3 {
@@ -161,18 +166,20 @@ aside h3 {
 
 h4 {
     font-size: 1.383rem;
-    line-height: 1.9rem;
-    margin: 2.7rem 0 0;
+    line-height: 1.8rem;
+    margin: 2.4rem 0 0;
 }
 
 h5 {
     font-size: 1.296rem;
-    margin: 2.7rem 0 0;
+    line-height: 1.8rem;
+    margin: 2.4rem 0 0;
 }
 
 h6 {
     font-size: 1.138rem;
-    margin: 2.7rem 0 0;
+    line-height: 1.6rem;
+    margin: 2.4rem 0 0;
 }
 
 /**
@@ -240,7 +247,7 @@ svg:not(:root) {
  */
 
 figure {
-    margin: 1em 0px;
+    margin: .8rem 0 0;
     max-width: 100%;
 }
 
@@ -290,7 +297,7 @@ code, kbd, pre, samp {
 button, input, optgroup, select, textarea {
     color: inherit; /* 1 */
     font: inherit; /* 2 */
-    margin: .9rem 0 0; /* 3 */
+    margin: .8rem 0 0; /* 3 */
     max-width: 100%;
 }
 
@@ -484,15 +491,15 @@ optgroup {
 iframe {
     display: block;
     max-width: 100%;
-    margin: .9rem auto 0 !important;
+    margin: .8rem auto 0 !important;
 }
 
 .wp-video {
-    margin: .9rem 0 0;
+    margin: .8rem 0 0;
 }
 
 p {
-    margin: .9rem 0 0;
+    margin: .8rem 0 0;
     word-wrap: break-word;
 }
 
@@ -504,7 +511,7 @@ p > code {
 table {
     border-collapse: collapse;
     border-spacing: 0;
-    margin: .9rem 0 0;
+    margin: .8rem 0 0;
 }
 
 td, th {
@@ -512,12 +519,12 @@ td, th {
 }
 
 ul {
-    margin: .9rem 0 0;
+    margin: .8rem 0 0;
     padding-left: 1rem;
 }
 
 ol {
-    margin: .9rem 0 0;
+    margin: .8rem 0 0;
     padding-left: 1rem;
 }
 
@@ -542,13 +549,13 @@ li + li {
 }
 
 blockquote {
-    margin: 0.9rem 0px 0px 1.2rem;
+    margin: .8rem 0px 0px 1.2rem;
 }
 
 .alignleft {
     display: block;
     float: left;
-    margin-right: .9rem;
+    margin-right: .8rem;
 }
 
 .aligncenter {
@@ -560,13 +567,13 @@ blockquote {
 .alignright {
     display: block;
     float: right;
-    margin-left: .9rem;
+    margin-left: .8rem;
 }
 
 .alignleft,
 .alignright {
     margin-top: .4rem;
-    margin-bottom: .45rem;
+    margin-bottom: .4rem;
 }
 
 figure.alignleft,
@@ -696,7 +703,7 @@ header .entry-meta {
 }
 
 .wp-post-image {
-    margin-top: .9rem;
+    margin-top: .8rem;
 }
 
 footer.entry-meta {
@@ -705,7 +712,7 @@ footer.entry-meta {
 
 .gallery-item {
     display: inline-block;
-    margin: .9rem;
+    margin: .8rem;
 }
 
 nav.navigation {
@@ -737,12 +744,12 @@ nav.post-navigation:after, #comments ol header:after, .clearfix:after {
     float: left;
     font-size: 1.5em;
     position: absolute;
-    top: 48%;
+    top: 40%;
     transform: translateY(-50%);
 }
 
 .nav-previous a {
-    margin-left: 1.5rem;
+    margin-left: 1.2rem;
 }
 
 .nav-next {
@@ -756,12 +763,12 @@ nav.post-navigation:after, #comments ol header:after, .clearfix:after {
     font-size: 1.5em;
     position: absolute;
     right: 0;
-    top: 48%;
+    top: 40%;
     transform: translateY(-50%);
 }
 
 .nav-next a {
-    margin-right: 1.5rem;
+    margin-right: 1.2rem;
 }
 
 #author-avatar {
@@ -838,7 +845,7 @@ nav.post-navigation:after, #comments ol header:after, .clearfix:after {
 }
 
 .widget_search input[type=submit] {
-    margin-top: .9rem;
+    margin-top: .8rem;
 }
 
 #footer {
@@ -879,6 +886,8 @@ nav.post-navigation:after, #comments ol header:after, .clearfix:after {
     #author-avatar {
         display: block;
         float: left;
+        margin-top: 0.3rem;
+        line-height: 0;
     }
 
     #author-description {
@@ -899,7 +908,7 @@ nav.post-navigation:after, #comments ol header:after, .clearfix:after {
 
     #footer li {
         display: inline-block;
-        margin: .5em;
+        margin: 0 .5rem;
     }
 }
 
@@ -945,11 +954,16 @@ nav.post-navigation:after, #comments ol header:after, .clearfix:after {
     }
 }
 
-@media screen and (min-width: 70em) {
+@media screen and (min-width: 65em) {
     main {
         float: left;
         width: 59%;
         margin-left: 3%;
+    }
+
+    .no-sidebar main {
+        float: none;
+        margin: 0 auto;
     }
 
     main article.hentry, #author-info, main nav, #comments, #sidebar .widget, .navigation, header.archive-header {
@@ -991,25 +1005,25 @@ nav.post-navigation:after, #comments ol header:after, .clearfix:after {
     }
 }
 
-@media screen and (min-width: 100em) {
+@media screen and (min-width: 90em) {
     html {
         font-size: 1.5em;
     }
 }
 
-@media screen and (min-width: 110em) {
+@media screen and (min-width: 100em) {
     html {
         font-size: 1.6em;
     }
 }
 
-@media screen and (min-width: 120em) {
+@media screen and (min-width: 110em) {
     html {
-        font-size: 1.7em;
+        font-size: 1.68em;
     }
 }
 
-@media screen and (min-width: 130em) {
+@media screen and (min-width: 120em) {
     html {
         font-size: 1.8em;
     }

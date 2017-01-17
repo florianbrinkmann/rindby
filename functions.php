@@ -1,6 +1,36 @@
 <?php
 /**
- * Add theme support for feed links, title tag, post formats, Post thumbnails and html5
+ * Load translation from translate.WordPress.org if available
+ */
+function rindby_load_translation() {
+	if ( ( ! defined( 'DOING_AJAX' ) && ! 'DOING_AJAX' ) || ! rindby_is_login_page() || ! rindby_is_wp_comments_post() ) {
+		load_theme_textdomain( 'rindby' );
+	}
+}
+
+add_action( 'after_setup_theme', 'rindby_load_translation' );
+
+/**
+ * Check if we are on the login page
+ *
+ * @return bool
+ */
+function rindby_is_login_page() {
+	return in_array( $GLOBALS['pagenow'], array( 'wp-login.php', 'wp-register.php' ) );
+}
+
+/**
+ * Check if we are on the wp-comments-post.php
+ *
+ * @return bool
+ */
+function rindby_is_wp_comments_post() {
+	return in_array( $GLOBALS['pagenow'], array( 'wp-comments-post.php' ) );
+}
+
+/**
+ * Add theme support for feed links, title tag, post formats, Post thumbnails and html5.
+ * Sets content width
  */
 function rindby_setup() {
 	add_theme_support( 'automatic-feed-links' );
@@ -18,16 +48,16 @@ function rindby_setup() {
 	) );
 	add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
 	add_theme_support( 'post-thumbnails' );
+
+	/**
+	 * Set content width
+	 */
+	if ( ! isset( $content_width ) ) {
+		$content_width = 1147;
+	}
 }
 
 add_action( 'after_setup_theme', 'rindby_setup' );
-
-/**
- * Set content width
- */
-if ( ! isset( $content_width ) ) {
-	$content_width = 1147;
-}
 
 /**
  * Enqueue scripts and styles
@@ -38,8 +68,7 @@ function rindby_scripts_styles() {
 	}
 
 	wp_enqueue_style( 'rindby-style', get_template_directory_uri() . '/css/rindby.css', array(), null );
-
-	wp_enqueue_style( 'rindby-fonts', '//fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i', array(), null );
+	wp_enqueue_style( 'rindby-fonts', '//brick.a.ssl.fastly.net/Andada:400,700,400i,700i', array(), null );
 }
 
 add_action( 'wp_enqueue_scripts', 'rindby_scripts_styles' );
@@ -151,52 +180,41 @@ function rindby_footer_meta() {
  */
 function rindby_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
-	switch ( $comment->comment_type ) {
-		case 'pingback' :
-		case 'trackback' : ?>
-			<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
-			<p>
-				Trackback: <?php comment_author_link(); ?> <?php edit_comment_link( __( '(Edit)', 'rindby' ), '<span class="edit-link">', '</span>' ); ?></p>
+	global $post;
+	?>
+<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+    <article id="comment-<?php comment_ID(); ?>" class="comment">
+        <header class="comment-meta comment-author vcard">
 			<?php
-			break;
-		default :
-			global $post;
+			echo get_avatar( $comment, 60 );
+			printf( '<p><cite class="fn">%1$s</cite>',
+				get_comment_author_link()
+			);
+			printf( '<a href="%1$s"><time datetime="%2$s">%3$s</time></a></p>',
+				esc_url( get_comment_link( $comment->comment_ID ) ),
+				get_comment_time( 'c' ),
+				/* translators: Comment date. 1=date, 2=time */
+				sprintf( __( '%1$s @ %2$s', 'rindby' ), get_comment_date(), get_comment_time() )
+			);
 			?>
-		<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
-			<article id="comment-<?php comment_ID(); ?>" class="comment">
-				<header class="comment-meta comment-author vcard">
-					<?php
-					echo get_avatar( $comment, 60 );
-					printf( '<p><cite class="fn">%1$s</cite>',
-						get_comment_author_link()
-					);
-					printf( '<a href="%1$s"><time datetime="%2$s">%3$s</time></a></p>',
-						esc_url( get_comment_link( $comment->comment_ID ) ),
-						get_comment_time( 'c' ),
-						/* translators: Comment date. 1=date, 2=time */
-						sprintf( __( '%1$s @ %2$s', 'rindby' ), get_comment_date(), get_comment_time() )
-					);
-					?>
-				</header>
-				<?php if ( '0' == $comment->comment_approved ) { ?>
-					<p class="comment-awaiting-moderation">Dein Kommentar wartet auf Moderation.</p>
-				<?php } ?>
-				<section class="comment-content comment">
-					<?php comment_text(); ?>
-					<?php edit_comment_link( __( '(Edit)', 'rindby' ), '<p class="edit-link">', '</p>' ); ?>
-				</section>
-				<div class="reply">
-					<?php comment_reply_link( array_merge( $args, array(
-						'reply_text' => __( 'Reply', 'rindby' ),
-						'after'      => ' <span>&darr;</span>',
-						'depth'      => $depth,
-						'max_depth'  => $args['max_depth']
-					) ) ); ?>
-				</div>
-			</article>
-			<?php
-			break;
-	}
+        </header>
+		<?php if ( '0' == $comment->comment_approved ) { ?>
+            <p class="comment-awaiting-moderation">Dein Kommentar wartet auf Moderation.</p>
+		<?php } ?>
+        <section class="comment-content comment">
+			<?php comment_text(); ?>
+			<?php edit_comment_link( __( '(Edit)', 'rindby' ), '<p class="edit-link">', '</p>' ); ?>
+        </section>
+        <div class="reply">
+			<?php comment_reply_link( array_merge( $args, array(
+				'reply_text' => __( 'Reply', 'rindby' ),
+				'after'      => ' <span>&darr;</span>',
+				'depth'      => $depth,
+				'max_depth'  => $args['max_depth']
+			) ) ); ?>
+        </div>
+    </article>
+	<?php
 }
 
 /**
@@ -251,3 +269,20 @@ function rindby_get_comments_by_type() {
 
 	return $comments_by_type;
 }
+
+/**
+ * Adds no-sidebar class to body element if sidebar-1 is not active
+ *
+ * @param $classes
+ *
+ * @return array
+ */
+function rindby_filter_body_class( $classes ) {
+	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+		$classes[] = 'no-sidebar';
+	}
+
+	return $classes;
+}
+
+add_filter( 'body_class', 'rindby_filter_body_class' );
