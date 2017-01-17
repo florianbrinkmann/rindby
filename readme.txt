@@ -1,5 +1,12 @@
 == Changelog ==
 
+Version 1.1.3 – 17.01.2017
+---
+- updated screenshot
+- changed font stack to Droid Serif
+
+
+
 Version 1.1.2 – 17.01.2017
 ---
 - changed font to Droid Serif

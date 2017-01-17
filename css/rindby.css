@@ -12,7 +12,7 @@
 
 html {
     color: #444444;
-    font-family: "Andada", "Segoe UI Bold", "Roboto Slab", "Droid Serif", AvenirNext-Bold, "Avenir Bold", Georgia, "Times New Roman", Times, serif; /* 1 */
+    font-family: "Droid Serif", "Segoe UI Bold", "Roboto Slab", AvenirNext-Bold, "Avenir Bold", Georgia, "Times New Roman", Times, serif; /* 1 */
     font-size: 1em;
     line-height: 1.6;
     -ms-text-size-adjust: 100%; /* 2 */
@@ -641,7 +641,6 @@ figure.alignright {
     font-size: 1.66em;
     line-height: 2.4rem;
     margin: 3.6rem 0 0;
-    word-spacing: -0.5ex;
 }
 
 .page .site-title {
