@@ -20,10 +20,12 @@ get_header(); ?>
 				<div class="entry-content">
 					<?php the_post_thumbnail( 'large' );
 					the_content();
-					wp_link_pages( array(
-						'before' => '<div class="page-link"><span>' . __( 'Pages:', 'rindby' ) . '</span>',
-						'after'  => '</div>'
-					) ); ?>
+					wp_link_pages(
+						[
+							'before' => '<div class="page-link"><span>' . __( 'Pages:', 'rindby' ) . '</span>',
+							'after'  => '</div>',
+						]
+					); ?>
 				</div>
 			</article>
 			<div id="author-info" class="clearfix">
@@ -38,7 +40,7 @@ get_header(); ?>
 				</div>
 			</div>
 			<?php the_post_navigation();
-			comments_template( '', true );
+			comments_template(  );
 		} ?>
 	</main>
 <?php get_sidebar();

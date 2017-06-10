@@ -14,13 +14,15 @@ get_header(); ?>
 				</header>
 				<div class="entry-content">
 					<?php the_content();
-					wp_link_pages( array(
-						'before' => '<div class="page-link"><span>' . __( 'Pages:', 'rindby' ) . '</span>',
-						'after'  => '</div>'
-					) ); ?>
+					wp_link_pages(
+						[
+							'before' => '<div class="page-link"><span>' . __( 'Pages:', 'rindby' ) . '</span>',
+							'after'  => '</div>',
+						]
+					); ?>
 				</div>
 			</article>
-			<?php comments_template( '', true );
+			<?php comments_template(  );
 		} ?>
 	</main>
 <?php get_sidebar();
