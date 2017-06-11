@@ -1,12 +1,5 @@
 == Changelog ==
 
-Version 1.1.4 – 17.01.2017
----
-- switched to short array syntax []
-- Doc improvements
-- Comments template fixes
-
-
 Version 1.1.3 – 17.01.2017
 ---
 - updated screenshot
