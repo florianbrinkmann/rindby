@@ -941,7 +941,7 @@ nav.post-navigation:after,
 		margin-left: 3%;
 	}
 
-	.no-sidebar main {
+	.no-sidebar .main {
 		float: none;
 		margin: 0 auto;
 	}
