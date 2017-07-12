@@ -122,12 +122,12 @@ if ( ! function_exists( 'rindby_the_posts_pagination' ) ) {
 			'prev_text' => sprintf(
 				'<span class="screen-reader-text">%s</span><span aria-hidden="true">«</span>',
 				/* translators: screen reader label for »Previous« link of posts navigation */
-				__( 'Previous', 'photographus' )
+				__( 'Previous', 'rindby' )
 			),
 			'next_text' => sprintf(
 				'<span class="screen-reader-text">%s</span><span aria-hidden="true">»</span>',
 				/* translators: screen reader label for »Next« link of posts navigation */
-				__( 'Next', 'photographus' )
+				__( 'Next', 'rindby' )
 			),
 		] );
 	}
