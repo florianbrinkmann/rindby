@@ -1,28 +1,47 @@
 <?php
 /**
- * Template for search results
+ * Template for search results.
  *
- * @version 1.0.3
+ * @version 2.0.0
+ *
+ * @package Rindby
+ */
+
+/**
+ * Include header.php.
  */
 get_header(); ?>
-	<main role="main" id="main">
-		<?php if ( have_posts() ) { ?>
+	<main role="main" class="main">
+		<?php
+		/**
+		 * Check if we have posts.
+		 */
+		if ( have_posts() ) { ?>
 			<header class="archive-header">
 				<h1 class="archive-title">
 					<?php printf( __( 'Search results for: %s', 'rindby' ), get_search_query() ); ?>
 				</h1>
 			</header>
-			<?php while ( have_posts() ) {
+			<?php
+			/**
+			 * Loop the posts.
+			 */
+			while ( have_posts() ) {
+				/**
+				 * Setup post data.
+				 */
 				the_post();
-				get_template_part( 'content', get_post_format() );
-			}
-			the_posts_pagination(
-				[
-					'type'      => 'list',
-					'prev_text' => '&laquo;',
-					'next_text' => '&raquo;',
-				]
-			);
+
+				/**
+				 * Include partial for displaying post content.
+				 */
+				get_template_part( 'partials/content', get_post_format() );
+			} // End while().
+
+			/**
+			 * Display posts pagination.
+			 */
+			rindby_the_posts_pagination();
 		} else { ?>
 			<header class="archive-header">
 				<h1 class="archive-title">
@@ -30,9 +49,20 @@ get_header(); ?>
 					printf( __( 'Nothing found for %s', 'rindby' ), get_search_query() ); ?>
 				</h1>
 			</header>
-			<?php get_search_form();
-		} ?>
+			<?php
+			/**
+			 * Display search form.
+			 */
+			get_search_form();
+		} // End if(). ?>
 	</main>
 <?php
+/**
+ * Include sidebar.php.
+ */
 get_sidebar();
-get_footer(); ?>
+
+/**
+ * Include footer.php.
+ */
+get_footer();

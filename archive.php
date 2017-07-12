@@ -2,7 +2,7 @@
 /**
  * Template for archives like categories, tags.
  *
- * @version 1.1.4
+ * @version 2.0.0
  *
  * @package Rindby
  */
@@ -11,7 +11,7 @@
  * Include header.php.
  */
 get_header(); ?>
-	<main role="main" id="main">
+	<main role="main" class="main">
 		<?php
 		/**
 		 * Check if we have posts.
@@ -45,7 +45,7 @@ get_header(); ?>
 				/**
 				 * Include template partial (default content.php).
 				 */
-				get_template_part( 'content', get_post_format() );
+				get_template_part( 'partials/content', get_post_format() );
 			} // End while().
 
 			/**
@@ -56,7 +56,7 @@ get_header(); ?>
 			/**
 			 * Display the content-none.php if we have no posts.
 			 */
-			get_template_part( 'content', 'none' );
+			get_template_part( 'partials/content', 'none' );
 		} // End if().
 		?>
 	</main>

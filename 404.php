@@ -2,7 +2,7 @@
 /**
  * Template for 404 error.
  *
- * @version 1.1.4
+ * @version 2.0.0
  *
  * @package Rindby
  */
@@ -11,8 +11,8 @@
  * Include header.php.
  */
 get_header(); ?>
-<main role="main" id="main">
-	<div id="content">
+<main role="main" class="main">
+	<div class="content">
 		<article class="page">
 			<header class="page-header">
 				<h1><?php _e( 'Nothing found&hellip;', 'rindby' ) ?></h1>

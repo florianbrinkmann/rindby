@@ -1,8 +1,8 @@
 <?php
 /**
- * Comments template
+ * Comments template.
  *
- * @version 1.1.4
+ * @version 2.0.0
  *
  * @package Rindby
  */
@@ -14,7 +14,7 @@
 if ( post_password_required() ) {
 	return;
 } ?>
-<aside aria-labelledby="aside" class="comments-area">
+<div aria-labelledby="aside" class="comments-area">
 	<?php if ( have_comments() ) {
 		/**
 		 * We cannot use the second parameter from comments_template()
@@ -145,4 +145,4 @@ if ( post_password_required() ) {
 	comment_form( [
 		'label_submit' => __( 'Submit Comment', 'rindby' ),
 	] ); ?>
-</aside>
+</div>

@@ -2,13 +2,13 @@
 /**
  * Footer template.
  *
- * @version 1.1.4
+ * @version 2.0.0
  *
  * @package Rindby
  */
 
 ?>
-<footer id="footer">
+<footer class="footer">
 	<?php
 	/**
 	 * Display the menu from the footer-menu theme location.
@@ -23,7 +23,7 @@
 		/**
 		 * Display theme author hint.
 		 */
-		printf(
+		printf( /* translators: s = linked name of theme author. */
 			__( 'Theme: Rindby by %s', 'rindby' ),
 			sprintf(
 				'<a rel="nofollow" href="%s">Florian Brinkmann</a>',

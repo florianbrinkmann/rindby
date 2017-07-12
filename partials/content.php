@@ -1,8 +1,8 @@
 <?php
 /**
- * Template part for normal posts
+ * Template part for normal posts.
  *
- * @version 1.1.4
+ * @version 2.0.0
  *
  * @package Rindby
  */
@@ -23,7 +23,7 @@
 			 */
 			rindby_the_reaction_count(); ?>
 		</p>
-	</header><!-- .entry-header -->
+	</header>
 	<div class="entry-content">
 		<?php
 		/**
@@ -40,12 +40,12 @@
 		 * Display post pagination.
 		 */
 		rindby_link_pages(); ?>
-	</div><!-- .entry-content -->
+	</div>
 	<footer class="entry-meta">
 		<p><?php
 			/**
 			 * Display the footer meta.
 			 */
 			rindby_footer_meta(); ?></p>
-	</footer><!-- .entry-meta -->
-</article><!-- #post-<?php the_ID(); ?> -->
+	</footer>
+</article>

@@ -1,29 +1,45 @@
 <?php
 /**
- * Page template
+ * Page template.
  *
- * @version 1.0
+ * @version 2.0.0
+ *
+ * @package Rindby
+ */
+
+/**
+ * Include header.php.
  */
 get_header(); ?>
-	<main role="main" id="main">
-		<?php while ( have_posts() ) {
-			the_post(); ?>
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<header class="entry-header">
-					<h1 class="entry-title"><?php the_title(); ?></h1>
-				</header>
-				<div class="entry-content">
-					<?php the_content();
-					wp_link_pages(
-						[
-							'before' => '<div class="page-link"><span>' . __( 'Pages:', 'rindby' ) . '</span>',
-							'after'  => '</div>',
-						]
-					); ?>
-				</div>
-			</article>
-			<?php comments_template(  );
-		} ?>
+	<main role="main" class="main">
+		<?php
+		/**
+		 * Check if we have a page.
+		 */
+		while ( have_posts() ) {
+			/**
+			 * Setup data of page.
+			 */
+			the_post();
+
+			/**
+			 * Include partials/content-page.php.
+			 */
+			get_template_part( 'partials/content', 'page' );
+
+			/**
+			 * Include comments.php.
+			 */
+			comments_template();
+		} // End while(). ?>
 	</main>
-<?php get_sidebar();
+<?php
+/**
+ * Include sidebar.php.
+ */
+get_sidebar();
+
+/**
+ * Include footer.php.
+ */
 get_footer();
