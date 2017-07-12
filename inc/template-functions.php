@@ -106,7 +106,11 @@ function rindby_scripts_styles() {
 	/**
 	 * Enqueue stylesheet.
 	 */
-	wp_enqueue_style( 'rindby-style', get_theme_file_uri( 'css/rindby.css' ), [], null );
+	if ( is_rtl() ) {
+		wp_enqueue_style( 'rindby-style', get_theme_file_uri( 'css/rindby-rtl.css' ), [], null );
+	} else {
+		wp_enqueue_style( 'rindby-style', get_theme_file_uri( 'css/rindby.css' ), [], null );
+	}
 
 	/**
 	 * Enqueue Google fonts.

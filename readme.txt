@@ -19,6 +19,10 @@ made modifications to the functions.php in a child theme, check it before updati
 Furthermore, the HTML id attributes were changed to classes. So if you used them for
 styling adjustments or JS, you have to switch to classes.
 
+**Added**
+
+* RTL styles
+
 **Changed**
 
 * switched to short array syntax []
