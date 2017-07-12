@@ -477,21 +477,10 @@ optgroup {
 	font-weight: bold;
 }
 
-/* Tables
-   ========================================================================== */
-
-/**
- * Remove most spacing between table cells.
- */
-
 iframe {
 	display: block;
 	max-width: 100%;
 	margin: .8em auto 0 !important;
-}
-
-.wp-video {
-	margin: .8em 0 0;
 }
 
 p {
@@ -549,6 +538,19 @@ blockquote {
 	margin: .8em 0 0 1.2em;
 }
 
+.screen-reader-text,
+.screen-reader-response {
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute !important;
+	width: 1px;
+}
+
+.wp-video {
+	margin: .8em 0 0;
+}
+
 .alignleft {
 	display: block;
 	float: left;
@@ -599,15 +601,17 @@ figure.alignright {
 .bypostauthor {
 }
 
-.header, main, .sidebar {
-	margin: 0 auto;
-	width: 90%;
-}
-
 .wrapper {
 	display: block;
 	max-width: 73.7463em;
 	margin: 0 auto;
+}
+
+.header,
+.main,
+.sidebar {
+	margin: 0 auto;
+	width: 90%;
 }
 
 .branding {
@@ -654,23 +658,14 @@ figure.alignright {
 	font-style: italic;
 }
 
-.screen-reader-text,
-.screen-reader-response {
-	clip: rect(1px, 1px, 1px, 1px);
-	height: 1px;
-	overflow: hidden;
-	position: absolute !important;
-	width: 1px;
-}
-
 .main,
 .sidebar {
 	margin-top: 3.6em;
 }
 
-main article:not(:first-of-type),
-.archive main article:first-of-type,
-.search main article:first-of-type {
+.main article:not(:first-of-type),
+.archive .main article:first-of-type,
+.search .main article:first-of-type {
 	margin-top: 3.2em;
 }
 
