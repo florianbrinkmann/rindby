@@ -935,7 +935,7 @@ nav.post-navigation:after,
 }
 
 @media screen and (min-width: 65em) {
-	main {
+	.main {
 		float: left;
 		width: 59%;
 		margin-left: 3%;
@@ -946,7 +946,7 @@ nav.post-navigation:after,
 		margin: 0 auto;
 	}
 
-	main article.hentry, main nav, .comments-area, .sidebar .widget, .navigation, header.archive-header {
+	.main article.hentry, .main nav, .comments-area, .sidebar .widget, .navigation, header.archive-header {
 		width: auto;
 	}
 
@@ -962,7 +962,7 @@ nav.post-navigation:after,
 }
 
 @media screen and (min-width: 78.75em) {
-	main {
+	.main {
 		margin-left: 6%;
 		width: 56%;
 	}
@@ -974,7 +974,7 @@ nav.post-navigation:after,
 }
 
 @media screen and (min-width: 92em) {
-	main {
+	.main {
 		margin-left: 8%;
 		width: 54%;
 	}
