@@ -1,0 +1,9 @@
+== Copyright ==
+
+Droid Serif
+Licence: Apache License, 2.0
+Source: https://fonts.google.com/specimen/Droid+Serif
+
+---
+Rindby WordPress Theme, Copyright 2016 Florian Brinkmann
+Rindby is distributed under the terms of the GNU GPL
