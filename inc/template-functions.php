@@ -111,11 +111,6 @@ function rindby_scripts_styles() {
 	} else {
 		wp_enqueue_style( 'rindby-style', get_theme_file_uri( 'css/rindby.css' ), [], null );
 	}
-
-	/**
-	 * Enqueue Google fonts.
-	 */
-	wp_enqueue_style( 'rindby-fonts', '//fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i', [], null );
 }
 
 /**
