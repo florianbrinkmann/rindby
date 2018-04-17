@@ -1,13 +1,24 @@
 === Rindby ===
 Contributors: FlorianBrinkmann
 Requires at least: 4.7
-Tested up to: 4.8
+Tested up to: 4.9.5
 
 == Description ==
 
 The Rindby theme is a simple blogging theme without any extras.
 
 == Changelog ==
+
+= 2.0.1 – 17.04.2018 =
+
+**Changed**
+
+* Use Noto Serif instead of Droid Serif (for some reason, Droid serif is no longer available on Google Fonts).
+* Bundle the font files into the theme instead of loading them from Google Fonts.
+
+**Fixed**
+
+* Small CSS fixes.
 
 = 2.0.0 – 12.07.2017 =
 
@@ -37,7 +48,6 @@ also after a theme switch).
 **Fixed**
 
 * Comments template fixes
-
 
 = 1.1.3 – 17.01.2017 =
 

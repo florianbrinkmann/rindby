@@ -1,9 +1,9 @@
 == Copyright ==
 
-Droid Serif
-Licence: Apache License, 2.0
-Source: https://fonts.google.com/specimen/Droid+Serif
+Noto Serif
+Licence: SIL OPEN FONT LICENSE Version 1.1
+Source: https://www.google.com/get/noto/
 
 ---
-Rindby WordPress Theme, Copyright 2016 Florian Brinkmann
+Rindby WordPress Theme, Copyright 2018 Florian Brinkmann
 Rindby is distributed under the terms of the GNU GPL
