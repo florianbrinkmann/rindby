@@ -1252,8 +1252,8 @@ nav.post-navigation:after,
 @media screen and (min-width: 65em) {
   .main {
     float: right;
-    width: 59%;
-    margin-right: 3%;
+    width: 58%;
+    margin-right: 4%;
   }
 
   .no-sidebar .main {
@@ -1272,8 +1272,8 @@ nav.post-navigation:after,
 
   .sidebar {
     float: left;
-    width: 28%;
-    margin-left: 3%;
+    width: 27%;
+    margin-left: 4%;
   }
 
   .sidebar-content {
