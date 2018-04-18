@@ -78,7 +78,7 @@ function rindby_set_content_width() {
 	/**
 	 * Set the content width to 1147.
 	 */
-	$content_width = 1147;
+	$content_width = 956;
 
 	/**
 	 * Make the content width filterable.

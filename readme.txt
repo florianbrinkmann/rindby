@@ -9,6 +9,12 @@ The Rindby theme is a simple blogging theme without any extras.
 
 == Changelog ==
 
+= 2.0.2 – 18.04.2018 =
+
+**Fixed**
+
+* Set content width to 956px (was 1147px before, but version 2.0.1 decreased the max font size and with that the max width of the layout).
+
 = 2.0.1 – 17.04.2018 =
 
 **Changed**
