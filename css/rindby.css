@@ -1046,6 +1046,23 @@ nav.post-navigation:after,
 	margin-top: 0;
 }
 
+.comment-form-cookies-consent {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: baseline;
+	-ms-flex-align: baseline;
+	align-items: baseline;
+}
+
+.comment-form-cookies-consent label {
+	margin-left: .5em;
+}
+
+.comment-form-cookies-consent input {
+	width: auto;
+}
+
 .page-numbers li {
 	display: inline-block;
 	margin: 0 .2em;
