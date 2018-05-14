@@ -1,27 +1,32 @@
-=== Rindby ===
-Contributors: FlorianBrinkmann
-Requires at least: 4.7
-Tested up to: 4.9.6
+# Rindby 
+**Contributors:** FlorianBrinkmann  
+**Requires at least:** 4.7  
+**Tested up to:** 4.9.6  
 
-== Description ==
+
+## Description 
 
 The Rindby theme is a simple blogging theme without any extras.
 
-== Changelog ==
 
-= 2.0.3 – 14.05.2018 =
+## Changelog 
+
+
+### 2.0.3 – 14.05.2018 
 
 **Fixed**
 
 * Styling of new comment cookie consent checkbox.
 
-= 2.0.2 – 18.04.2018 =
+
+### 2.0.2 – 18.04.2018 
 
 **Fixed**
 
 * Set content width to 956px (was 1147px before, but version 2.0.1 decreased the max font size and with that the max width of the layout).
 
-= 2.0.1 – 17.04.2018 =
+
+### 2.0.1 – 17.04.2018 
 
 **Changed**
 
@@ -32,7 +37,8 @@ The Rindby theme is a simple blogging theme without any extras.
 
 * Small CSS fixes.
 
-= 2.0.0 – 12.07.2017 =
+
+### 2.0.0 – 12.07.2017 
 
 **This version requires at least WordPress 4.7.**
 
@@ -61,55 +67,64 @@ also after a theme switch).
 
 * Comments template fixes
 
-= 1.1.3 – 17.01.2017 =
+
+### 1.1.3 – 17.01.2017 
 
 * updated screenshot
 * changed font stack to Droid Serif
 
 
 
-= 1.1.2 – 17.01.2017 =
+
+### 1.1.2 – 17.01.2017 
 
 * changed font to Droid Serif
 
 
 
-= 1.1.1 – 17.01.2017 =
+
+### 1.1.1 – 17.01.2017 
 
 * switched theme and author uri…
 
 
 
-= 1.1 – 17.01.2017 =
+
+### 1.1 – 17.01.2017 
 
 * changed font to Andada
 
 
 
-= 1.0.4 – 16.01.2017 =
+
+### 1.0.4 – 16.01.2017 
 
 * escaping author url in footer.php
 
 
 
-= 1.0.3 – 16.01.2017 =
+
+### 1.0.3 – 16.01.2017 
 
 * implemented requirements from theme review
 
 
 
-= 1.0.2 – 15.08.2016 =
+
+### 1.0.2 – 15.08.2016 
 
 * corrected theme name in footer.php
 
 
 
-= 1.0.1 – 15.08.2016 =
+
+### 1.0.1 – 15.08.2016 
 
 * added @version tag in file headers
 
 
 
-= 1.0 – 14.08.2016 =
+
+### 1.0 – 14.08.2016 
 
 * initial release
